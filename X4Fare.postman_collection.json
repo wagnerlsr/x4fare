@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "0fa343c6-902b-43bd-82c0-4fdd2fa4235b",
+		"name": "X4Fare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "422198"
+	},
+	"item": [
+		{
+			"name": "Get Buses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/buses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"buses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Bus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Linha 3\",\n  \"tripFare\": 4.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/buses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"buses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"User 4\",\n  \"type\": \"STUDENT\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"busId\": 1,\n  \"userId\": 4,\n  \"transactionDate\": \"2024-04-28T16:00:00.000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/reports/daily-report?startDate=2024-04-27&endDate=2024-04-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"reports",
+						"daily-report"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-04-27"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-04-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bus Stop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/x4fare/v1/bus/stop_timetables/450024834.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"x4fare",
+						"v1",
+						"bus",
+						"stop_timetables",
+						"450024834.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
