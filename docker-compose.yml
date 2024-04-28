@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  postgres_x4fare:
+    container_name: postgres_x4fare
+    image: postgres:14.11
+    environment:
+      POSTGRES_USER: x4fare
+      POSTGRES_PASSWORD: x4fare
+      POSTGRES_DATABASE: x4fare
+    ports:
+      - "5432:5432"
