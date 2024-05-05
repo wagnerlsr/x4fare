@@ -30,6 +30,8 @@ public class BusStopController {
 	@GetMapping("/bus/stop_timetables/feign/{atcocode}")
 	public ResponseEntity<Object> stopTimetablesFeign(@PathVariable("atcocode") String atcocode) {
 		try {
+			System.out.println("ATCO Code: " + atcocode);
+
 			var res = busStopClient.getStopTimetables(atcocode,
 					"ee9dddff", "6b6193e54d358084bd4fd58ecb9ed1b7");
 
