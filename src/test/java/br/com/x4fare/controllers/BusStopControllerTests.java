@@ -2,6 +2,7 @@ package br.com.x4fare.controllers;
 
 import br.com.x4fare.services.BusStopService;
 import br.com.x4fare.services.ReportService;
+import br.com.x4fare.services.webclient.BusStopClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +34,8 @@ class BusStopControllerTests {
 
     @MockBean(name="busStopService")
     BusStopService busStopService;
+    @MockBean(name="busStopClient")
+    BusStopClient busStopClient;
     BusStopController busStopController;
     HashMap<String, Object> departures;
 
@@ -53,7 +56,7 @@ class BusStopControllerTests {
 
         departures.put("Departures", List.of(map1, map2));
 
-        busStopController = new BusStopController(busStopService);
+        busStopController = new BusStopController(busStopService, busStopClient);
     }
 
     @Test

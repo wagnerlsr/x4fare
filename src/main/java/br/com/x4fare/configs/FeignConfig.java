@@ -1,4 +1,4 @@
-package br.com.original.pgsv.configs;
+package br.com.x4fare.configs;
 
 import feign.Logger;
 import org.springframework.context.annotation.Configuration;
